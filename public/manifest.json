@@ -1,21 +1,116 @@
 {
+  "id": "/campus-ai",
   "name": "Campus AI",
   "short_name": "Campus AI",
   "description": "Öğrencinin yapay zeka asistanı",
   "start_url": "/",
+  "scope": "/",
+  "lang": "tr",
+  "dir": "ltr",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "minimal-ui", "tabbed"],
+  "orientation": "portrait",
+  "categories": ["education", "productivity", "utilities"],
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.campus.ai",
+      "id": "com.campus.ai"
+    }
+  ],
+  "iarc_rating_id": "e84b0fa5-e9cc-46af-9c5e-5ea3a6caabcc",
+  "scope_extensions": [
+    {
+      "origin": "*.run.app"
+    }
+  ],
   "background_color": "#0d1017",
   "theme_color": "#0d1017",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "icon-512.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
-  ]
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-portrait.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshot-landscape.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Çalışma Hedefi",
+      "short_name": "Hedef",
+      "description": "Haftalık çalışma hedefini düzenle",
+      "url": "/?action=goal",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/",
+      "accept": {
+        "application/pdf": [".pdf"]
+      }
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+campusai",
+      "url": "/?action=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "name",
+      "text": "description",
+      "url": "link",
+      "files": [
+        {
+          "name": "file",
+          "accept": ["application/pdf"]
+        }
+      ]
+    }
+  },
+  "widgets": [
+    {
+      "name": "Campus AI Quick Widget",
+      "description": "Hızlı Erişim",
+      "tag": "campusai-quick",
+      "ms_ac_template": "widget-template.json",
+      "data": "widget-data.json",
+      "type": "application/json"
+    }
+  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "note_taking": {
+    "new_note_url": "/?action=new_note"
+  }
 }

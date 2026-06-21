@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#ffffff"/>
+  
+  <!-- Inner purple rounded rect -->
+  <rect x="56" y="32" width="400" height="380" rx="80" fill="#6127cb" />
+  <!-- Inner stroke for that depth effect -->
+  <rect x="62" y="38" width="388" height="368" rx="74" fill="none" stroke="#7541d4" stroke-width="4" />
+  
+  <!-- Floating top piece -->
+  <rect x="226" y="96" width="60" height="10" rx="3" fill="#eaddff" />
+  
+  <!-- Mortarboard top -->
+  <polygon points="256,120 400,165 256,210 112,165" fill="#fdfcff" />
+  
+  <!-- Mortarboard base -->
+  <!-- A semi transparent/white curved area -->
+  <path d="M 180,186 L 180,220 C 180,245 332,245 332,220 L 332,186 Z" fill="#fdfcff" opacity="0.8" />
+  
+  <!-- Tassel -->
+  <line x1="380" y1="160" x2="380" y2="215" stroke="#fdfcff" stroke-width="4" />
+  <circle cx="380" cy="215" r="3" fill="#fdfcff" />
+  <!-- Tassel fringes -->
+  <path d="M 380,215 L 372,240 M 380,215 L 380,240 M 380,215 L 388,240" stroke="#fdfcff" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Neural Net nodes -->
+  <!-- A beautiful symmetrical lattice under the cap -->
+  <g stroke="#9f7dec" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 140,240 L 170,280 L 220,245 L 256,260 L 292,245 L 342,280 L 372,240" />
+    <path d="M 170,280 L 256,290 L 342,280" />
+    <path d="M 220,245 L 256,290" />
+    <path d="M 292,245 L 256,290" />
+    <path d="M 256,260 L 256,290" />
+  </g>
+  <g fill="#eaddff">
+    <circle cx="140" cy="240" r="5" />
+    <circle cx="170" cy="280" r="5" />
+    <circle cx="220" cy="245" r="5" />
+    <circle cx="256" cy="260" r="5" />
+    <circle cx="292" cy="245" r="5" />
+    <circle cx="342" cy="280" r="5" />
+    <circle cx="372" cy="240" r="5" />
+    <circle cx="256" cy="290" r="5" />
+  </g>
+
+  <!-- Text "Campus AI" -->
+  <text x="256" y="460" font-family="'Inter', sans-serif, 'Segoe UI'" font-weight="700" font-size="44" fill="#6127cb" text-anchor="middle">Campus</text>
+  <text x="256" y="495" font-family="'Inter', sans-serif, 'Segoe UI'" font-weight="300" font-size="32" fill="#886AD1" text-anchor="middle">AI</text>
+</svg>
