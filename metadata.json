@@ -1,0 +1,8 @@
+{
+  "name": "Campus AI",
+  "description": "Öğrencinin yapay zeka asistanı - Mobil Uygulama Arayüzü",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
